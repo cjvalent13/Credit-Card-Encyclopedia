@@ -1,5 +1,5 @@
-// code here
-// visa - gold
-// mastercard - standard
-// discover - cash back
-// wells fargo platinum card
+function GrabPicture()
+{
+	var AnimalName = document.getElementById('ani').value;
+	document.getElementById('picID').innerHTML = '<img src="./img/CapitalOneQuickSilver.jpg">';
+}
