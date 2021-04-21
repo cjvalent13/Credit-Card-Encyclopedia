@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Credit Card Encyclopedia</title>
+<style>
+h1 {
+	text-align: center;
+	color: black;
+}
+
+p {
+  text-align: center;
+  color: red;
+} 
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 167px;
+  height: 100px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+
+</style>
 </head>
 <body>
-	
-	<h1>Chris Valentin HW2</h1>
-	
-	
+
+<h1>Credit Card Encyclopedia</h1>
+<p>Every paragraph will be affected by the style.</p>
+<p id="para1">Me too!</p>
+<p>And me!</p>
+
 </body>
 
-<label for="cars">Choose a Credit Card:</label>
+
+
+<label for="cards">Choose a Credit Card:</label>
 
 <select name="Credit Cards" id="cards">
   <option value="volvo">Volvo</option>
@@ -18,5 +46,8 @@
   <option value="mercedes">Mercedes</option>
   <option value="audi">Audi</option>
 </select>
+
+<a href="./img/ChaseFreedomUnlimited.jpg">
+<img src="./img/ChaseFreedomUnlimited.jpg">
 
 </html>
