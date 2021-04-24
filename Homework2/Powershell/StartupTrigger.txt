@@ -1,0 +1,9 @@
+$trigger = New-JobTrigger -AtLogOn -RandomDelay 00:00:30 
+#$trigger = New-JobTrigger -Once -At "4/23/2021 7:13 pM"
+#Register-ScheduledJob -Trigger $trigger -FilePath C:\Users\chris\Documents\RunCode.ps1
+#Start-Process C:\Users\chris\Documents\RunCode.ps1
+
+
+Register-ScheduledJob -Name "testing1" -Trigger $trigger -ScriptBlock {
+Start-Process C:\Users\chris\Documents\RunCode.ps1
+}
