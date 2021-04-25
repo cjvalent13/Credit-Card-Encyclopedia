@@ -1,9 +1,21 @@
-$trigger = New-JobTrigger -AtLogOn -RandomDelay 00:00:30 
-#$trigger = New-JobTrigger -Once -At "4/23/2021 7:13 pM"
-#Register-ScheduledJob -Trigger $trigger -FilePath C:\Users\chris\Documents\RunCode.ps1
-#Start-Process C:\Users\chris\Documents\RunCode.ps1
+#$trigger = New-JobTrigger -AtLogOn -RandomDelay 00:00:30 
+#$trigger = New-JobTrigger -Once -At "4/24/2021 8:05:00 pM"
+#Register-ScheduledJob -Trigger $trigger -FilePath D:\Files\Documents\OpenWebsite.ps1
+#Register-ScheduledJob -Trigger $trigger write-host "hello"
+
+#Start-Process D:\Files\Documents\OpenWebsite.ps1
+#$test
 
 
-Register-ScheduledJob -Name "testing1" -Trigger $trigger -ScriptBlock {
-Start-Process C:\Users\chris\Documents\RunCode.ps1
-}
+
+
+#Register-ScheduledJob -Name "testing1" -Trigger $trigger -ScriptBlock {
+#Start-Process D:\Files\Documents\OpenWebsite.ps1
+#}
+
+
+#so basically this opens the file without running it. in a text file. If we could read that text file and store it inside a variable and then call the variable
+
+
+$tasktrigger = New-ScheduledTaskTrigger -Once -At "4/24/2021 8:20:00 pM"
+New-ScheduledTask -Trigger $tasktrigger -Action OpenWebsite.ps1
